@@ -1,0 +1,13 @@
+<?php 
+if(!defined( 'ALLOW_FOOTER'))
+{
+    exit('You do not have a config file');
+}
+?>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
