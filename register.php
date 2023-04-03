@@ -1,5 +1,7 @@
 <?php
+// Allow the config
     define('__CONFIG__', true);
+// Require the config    
     require_once "inc/config.php"; 
 ?>
 
@@ -13,28 +15,32 @@
     <title>PHP Registration Page</title>
 </head>
 <body>
-    <div class="uk-section uk-container uk-text-center">
+    <div class="uk-section uk-container">
         <div class="uk-grid uk-child-width-1-@3 uk-child-width-1-1" uk-grid>
-            <form class="uk-form-stacked">
-                <div class="uk-margin js-register">
+            <form class="uk-form-stacked js-register">
+                <div class="uk-margin">
                     <h2>Register</h2>
-                    <label class="uk-form-label" for="form-stacked-text">Email</label>
+                    <label class="uk-form-label" for="form-stacked-text">email</label>
                     <div class="uk-form-controls">
                         <input class="uk-input" id="form-stacked-text" type="email" required='required' placeholder="email@address.com">
                     </div>
                 </div>
 
                 <div class="uk-margin">
-                    <label class="uk-form-label" for="form-stacked-select">Password</label>
+                    <label class="uk-form-label" for="form-stacked-select">password</label>
                     <div class="uk-form-controls">
                         <input class="uk-input" id="form-stacked-text" type="password" required='required' placeholder="Your password here">
                     </div>
                 </div>
-                <div class="uk-margin">
+                <!-- <div class="uk-margin">
                     <label class="uk-form-label" for="form-stacked-select">Password</label>
                     <div class="uk-form-controls">
                         <input class="uk-input" id="form-stacked-text" type="password" required='required' placeholder="Retype password here">
                     </div>
+                </div> -->
+
+                <div class="uk-margin uk-alert uk-alert-danger js-error" style="display: none;">
+                    Test
                 </div>
 
                 <div class="uk-margin">

@@ -4,5 +4,8 @@ if(!defined( '__CONFIG__'))
     exit('You do not have a config file');
 }
 
-define('ALLOW_FOOTER', true);
+
+require_once "classes/DB.php";
+
+$con = DB::getconnection();
 ?>

@@ -1,5 +1,8 @@
 <?php
+
+// Allow the config
     define('__CONFIG__', true);
+// Require the config
     require_once "inc/config.php"; 
 ?>
 
@@ -13,14 +16,14 @@
     <title>PHP Home Page</title>
 </head>
 <body>
-    <div class="uk-section uk-container uk-text-center">
+    <div class="uk-section uk-container">
         <?php
             echo "Hello World. Today is: ";
             echo date("Y m d t");
         ?>
         <p>
-            <a href="login.php">Login if you already have an account</a>
-            <a href="register.php">Register for a new account</a>
+            <a href="login.php">Login</a>
+            <a href="register.php">Register</a>
         </p>
     </div>
 
