@@ -1,7 +1,7 @@
 <!-- Will find server root -->
-<!-- <?php
+<?php
 // echo $_SERVER['DOCUMENT_ROOT'];
-?> -->
+?>
 
 <!-- jQuery is required -->
 <script

@@ -32,8 +32,9 @@
                         <input class="uk-input" id="form-stacked-text" type="password" required='required' placeholder="Your password here">
                     </div>
                 </div>
+
                 <!-- <div class="uk-margin">
-                    <label class="uk-form-label" for="form-stacked-select">Password</label>
+                    <label class="uk-form-label" for="form-stacked-select">password</label>
                     <div class="uk-form-controls">
                         <input class="uk-input" id="form-stacked-text" type="password" required='required' placeholder="Retype password here">
                     </div>
