@@ -6,6 +6,7 @@ if(!defined( '__CONFIG__'))
 
 
 require_once "classes/DB.php";
+require_once "classes/Filter.php";
 
 $con = DB::getconnection();
 ?>
