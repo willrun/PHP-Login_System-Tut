@@ -1,4 +1,6 @@
 $(document)
+
+// Register
 .on("submit", "form.js-register", function(event)
 {
     event.preventDefault();
@@ -35,6 +37,7 @@ $(document)
     
     // Assuming the code gets this far we can start the ajax process
     _error.hide();
+
     $.ajax({
         type: 'POST',
         url: '/phpLoginCourse/ajax/register.php',
@@ -67,8 +70,11 @@ $(document)
         //Always do  
         console.log('Always');        
     })
+    return false;
+})
 
-    .on("submit", "form.js-login", function(event)
+// Login
+.on("submit", "form.js-login", function(event)
 {
     event.preventDefault();
     
@@ -77,7 +83,6 @@ $(document)
     var dataObj = {
         email: $("input[type='email']",_form).val(),
         password: $("input[type='password']",_form).val()
-        // Password: $("input[type='password']",_form).val()
     };
 
     if(dataObj.email.length < 6)
@@ -97,6 +102,7 @@ $(document)
     
     // Assuming the code gets this far we can start the ajax process
     _error.hide();
+    
     $.ajax({
         type: 'POST',
         url: '/phpLoginCourse/ajax/login.php',
@@ -114,7 +120,8 @@ $(document)
         }
         else if(data.error !== undefined)
         {
-            _error.text(data.error)
+            _error
+            .html(data.error)
             .show();
         }
     })

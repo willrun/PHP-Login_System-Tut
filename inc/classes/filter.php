@@ -10,7 +10,7 @@ class Filter
 	
 	/**
 	 *  @param	string	$string		String to filter before putting inside InnoDB
-	 *  @return            			Filters and returns a valid string to put into the Database.
+	 *  @return            			Filter and returns a valid string to put into the Database.
 	 *  @note				If the $html arg is false, new lines (\n) will replaced with __BR__ and re-converted to \r\n afterwards.
 	 * 					.. This is to ensure new lines are kept in place.
 	 */
@@ -26,7 +26,7 @@ class Filter
 	
 	/**
 	 *  @param	string	$email		Email to filter before putting inside InnoDB
-	 *  @return            			Filters and returns a valid or invalid email address
+	 *  @return            			Filter and returns a valid or invalid email address
 	 */
 	public static function Email( $email ) {
 		return filter_var( $email , FILTER_SANITIZE_EMAIL);
@@ -34,7 +34,7 @@ class Filter
 	
 	/**
 	 *  @param	string	$url		String to filter before putting inside InnoDB
-	 *  @return            			Filters and returns a valid or invalid URL
+	 *  @return            			Filter and returns a valid or invalid URL
 	 */
 	public static function URL( $url ) {
 		return filter_var( $url , FILTER_SANITIZE_URL);
