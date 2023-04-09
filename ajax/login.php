@@ -33,13 +33,13 @@
              else
              {
                 // Invalid  email/password entered
-                $return['email'] = 'Invalid  email/password entered';
+                $return['error'] = 'Invalid  email or password entered';
              }
          }
          else
          {
             // They need to create a new account
-             $return['error'] = 'You do not have an account. <a href="/phpLoginCourse/register.php">Click here to create one</a>';
+             $return['error'] = "You do not have an account. <a href='/phpLoginCourse/register.php'>Click here to create one</a>";
          }
          // Returns the proper information back to javascript to redirect
          echo json_encode($return, JSON_PRETTY_PRINT); 

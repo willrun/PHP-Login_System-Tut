@@ -10,13 +10,12 @@ $(document)
     var dataObj = {
         email: $("input[type='email']",_form).val(),
         password: $("input[type='password']",_form).val()
-        // Password: $("input[type='password']",_form).val()
     };
 
     if(dataObj.email.length < 6)
     {
         _error
-        .text("Please enter a valid email address!")
+        .html("Please enter a valid email address!")
         .show();
         return false;
     }
@@ -30,7 +29,7 @@ $(document)
     else if(dataObj.password.length < 10)
     {
         _error
-        .text("Please make your password is least 10 characters long")
+        .html("Please make your password is least 10 characters long")
         .show();
         return false;
     }
@@ -49,15 +48,16 @@ $(document)
     .done(function ajaxDone(data)
     {
         //Whatever data is?
-        console.log(data);
         if (data.redirect !== undefined)
         {
             window.location = data.redirect;
         }
         else if(data.error !== undefined)
         {
-            _error.text(data.error)
+            _error
+            .html(data.error)
             .show();
+            console.log(data.error);
         }
     })
     .fail(function ajaxFailed(e)
@@ -107,6 +107,7 @@ $(document)
         type: 'POST',
         url: '/phpLoginCourse/ajax/login.php',
         data: dataObj,
+        timeout: 5000,
         dataType: 'json',
         async: true,
     })
@@ -120,8 +121,10 @@ $(document)
         }
         else if(data.error !== undefined)
         {
+            console.log(data.error);
+            const error = data.error;
             _error
-            .html(data.error)
+            .html(error)
             .show();
         }
     })

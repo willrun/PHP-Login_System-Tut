@@ -13,7 +13,8 @@ if(!isset($_SESSION))
 }
 
 require_once "classes/DB.php";
-require_once "classes/Filter.php";
+require_once "classes/filter.php";
+require_once "functions.php";
 
 $con = DB::getconnection();
 ?>
